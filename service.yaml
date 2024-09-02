@@ -1,0 +1,16 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: register-app1-service
+  labels:
+    app: register-app1 
+spec:
+  selector:
+    app: register-app1
+
+  ports:
+    - port: 8080
+      targetPort: 8080
+
+  type: LoadBalancer
